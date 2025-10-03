@@ -1,4 +1,4 @@
-import{g as q_,r as k_,R as hV,a as yn,j as Ir}from"./index-jImnGhjA.js";/**
+import{g as q_,r as k_,R as hV,a as yn,j as Ir}from"./index-BvPoo7vy.js";/**
  * @license
  * Copyright 2010-2025 Three.js Authors
  * SPDX-License-Identifier: MIT
