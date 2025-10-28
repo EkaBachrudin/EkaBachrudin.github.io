@@ -1,0 +1,12 @@
+This folder will contain screenshots and assets for the Telkomsel Shops migration project.
+
+Expected files:
+- logo.png (project logo)
+- 1.png (Next.js Homepage)
+- 2.png (Product Catalog with SSR)
+- 3.png (Shopping Cart with Zustand)
+- 4.png (Cypress Test Dashboard)
+- 5.png (CI/CD Pipeline)
+- 6.png (Performance Comparison)
+
+Please replace this placeholder file with actual project screenshots.
