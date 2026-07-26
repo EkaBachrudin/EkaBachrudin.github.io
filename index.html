@@ -5,10 +5,68 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>portfolio</title>
-    <script type="module" crossorigin src="/assets/index-lZ37Qn-r.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-Dn-P7B_R.css">
+    
+    <!-- Critical CSS Inlining for Instant LCP -->
+    <style>
+      /* Critical hero styles - Inline for instant rendering */
+      #home {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      /* System fonts for instant render */
+      .hero-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        opacity: 1; /* Instant visible */
+      }
+      
+      /* Subtitle - LCP Critical Element */
+      .hero-subtitle {
+        color: #787774;
+        line-height: 1.6;
+        opacity: 1; /* Instant visible */
+      }
+      
+      /* Badge */
+      .hero-badge {
+        opacity: 1; /* Instant visible */
+      }
+      
+      /* Font upgrade when loaded */
+      body.font-loaded .hero-title {
+        font-family: 'Newsreader', serif;
+        letter-spacing: -0.04em;
+      }
+    </style>
+    
+    <!-- Font Preloading with High Priority -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:wght@400;600;700&display=swap" /></noscript>
+    
+    <!-- DNS Prefetch for Font CDNs -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    
+    <!-- Preconnect to Font CDNs -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IHsgU3RyaWN0TW9kZSB9IGZyb20gJ3JlYWN0Jw0KaW1wb3J0IHsgY3JlYXRlUm9vdCB9IGZyb20gJ3JlYWN0LWRvbS9jbGllbnQnDQppbXBvcnQgJy4vaW5kZXguY3NzJw0KaW1wb3J0IEFwcCBmcm9tICcuL0FwcC50c3gnDQoNCi8vIEhhbmRsZSBHaXRIdWIgUGFnZXMgcm91dGluZw0KY29uc3QgcGF0aFNlZ21lbnRzVG9LZWVwID0gMA0KY29uc3QgbCA9IHdpbmRvdy5sb2NhdGlvbg0KDQovLyBDaGVjayBpZiB3ZSBoYXZlIGEgcmV3cml0dGVuIFVSTCBmcm9tIDQwNC5odG1sDQppZiAobC5zZWFyY2ggJiYgbC5zZWFyY2guaW5kZXhPZignPy8nKSA9PT0gMCkgew0KICBjb25zdCBuZXdQYXRoID0gbC5zZWFyY2guc2xpY2UoMikucmVwbGFjZSgvJi9nLCAnJicpLnJlcGxhY2UoL35hbmR+L2csICcmJykNCiAgY29uc3Qgc2VhcmNoSW5kZXggPSBuZXdQYXRoLmluZGV4T2YoJz8nKQ0KICBjb25zdCBoYXNoSW5kZXggPSBuZXdQYXRoLmluZGV4T2YoJyMnKQ0KDQogIGxldCBwYXRobmFtZSA9IG5ld1BhdGgNCiAgbGV0IHNlYXJjaCA9ICcnDQogIGxldCBoYXNoID0gJycNCg0KICBpZiAoc2VhcmNoSW5kZXggIT09IC0xKSB7DQogICAgcGF0aG5hbWUgPSBuZXdQYXRoLnN1YnN0cmluZygwLCBzZWFyY2hJbmRleCkNCiAgICBzZWFyY2ggPSBuZXdQYXRoLnN1YnN0cmluZyhzZWFyY2hJbmRleCkNCiAgfQ0KDQogIGlmIChoYXNoSW5kZXggIT09IC0xKSB7DQogICAgcGF0aG5hbWUgPSBwYXRobmFtZS5zdWJzdHJpbmcoMCwgaGFzaEluZGV4KQ0KICAgIGhhc2ggPSBuZXdQYXRoLnN1YnN0cmluZyhoYXNoSW5kZXgpDQogIH0NCg0KICAvLyBVcGRhdGUgdGhlIFVSTCB3aXRob3V0IHBhZ2UgcmVsb2FkDQogIHdpbmRvdy5oaXN0b3J5LnJlcGxhY2VTdGF0ZSgNCiAgICB7fSwNCiAgICAnJywNCiAgICBsLnBhdGhuYW1lLnNwbGl0KCcvJykuc2xpY2UoMCwgMSArIHBhdGhTZWdtZW50c1RvS2VlcCkuam9pbignLycpICsgJy8nICsNCiAgICBwYXRobmFtZSArIHNlYXJjaCArIGhhc2gNCiAgKQ0KfQ0KDQpjcmVhdGVSb290KGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdyb290JykhKS5yZW5kZXIoDQogIDxTdHJpY3RNb2RlPg0KICAgIDxBcHAgLz4NCiAgPC9TdHJpY3RNb2RlPiwNCikNCg==" as="script" type="module" crossorigin>
+    
+    <!-- Content Security Policy for optimized resource loading -->
+    <meta http-equiv="Content-Security-Policy" content="font-src 'self' https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;">
+    <script type="module" crossorigin src="/assets/index-CtSq6KB_.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/react-vendor-CzGtrsf6.js">
+    <link rel="modulepreload" crossorigin href="/assets/animation-vendor-YehKhxVT.js">
+    <link rel="modulepreload" crossorigin href="/assets/icon-vendor-DhOB19E6.js">
+    <link rel="stylesheet" crossorigin href="/assets/index-DGBO92sQ.css">
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root"></div>
   </body>
 </html>
